@@ -24,6 +24,7 @@ public class ActivityContent extends AppCompatActivity implements View.OnClickLi
             case R.id.saveButton:
                 Intent intent  = new Intent(this, MainActivity.class);
                 startActivity(intent);
+                finish();
                 break;
             default:
                 break;

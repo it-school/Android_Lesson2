@@ -44,7 +44,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onResume() {
         super.onResume();
-        if (getIntent().getStringExtra("address") == null || getIntent().getStringExtra("address") == "") {
+        if (getIntent().getStringExtra("address") == null) //это костыль, можете не вникать
+        {
             return;
         }
         //address = (TextView) findViewById(R.id.textView);

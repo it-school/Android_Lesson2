@@ -33,9 +33,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        // i=0;
-
-        // ArrayList<Object> objectsList = new ArrayList<>();
 
         ContentActivityButton = (Button) findViewById(R.id.ContentActivityButton);
         ContentActivityButton.setOnClickListener(this);

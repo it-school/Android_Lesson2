@@ -21,10 +21,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView address;
     private TextView description;
     private TextView time;
-    //ArrayList<String> objectsList = new ArrayList<String>();
     static String txtAddress;
 
-    //ActivityContent ob;
 
     static String[] names = {"1)", "2)", "3)", "4)", "5)", "6)", "7)", "8)", "9)", "10)",};
     static int i = -1;
@@ -45,15 +43,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         {
             return;
         }
-        //address = (TextView) findViewById(R.id.textView);
+
         else {
 
             txtAddress = getIntent().getStringExtra("address") + ';' +
                     getIntent().getStringExtra("time") + ';' +
                     getIntent().getStringExtra("description");
 
-            //address.setText(address.getText().toString() + " " + txtAddress);
-            //objectsList.add(txtAddress);
 
             i = i + 1;
             if (i == 9 || i < 0) {
@@ -62,15 +58,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             names[i] += txtAddress;
 
-            // находим список
             ListView List = (ListView) findViewById(R.id.List);
 
-            // создаем адаптер
             ArrayAdapter<String> adapter;
             adapter = new ArrayAdapter<String>(this,
                     android.R.layout.simple_list_item_1, names);
 
-            // присваиваем адаптер списку
             List.setAdapter(adapter);
         }
     }

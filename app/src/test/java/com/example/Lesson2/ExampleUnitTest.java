@@ -1,4 +1,4 @@
-package com.example.vanya.Lesson2;
+package com.example.Lesson2;
 
 import org.junit.Test;
 

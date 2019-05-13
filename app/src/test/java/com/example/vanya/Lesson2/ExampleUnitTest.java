@@ -1,8 +1,8 @@
-package com.example.vanya.lab_2;
+package com.example.vanya.Lesson2;
 
 import org.junit.Test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 /**
  * Example local unit test, which will execute on the development machine (host).

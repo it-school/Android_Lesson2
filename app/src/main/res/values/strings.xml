@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">lab_2</string>
+    <string name="app_name">Lesson2</string>
+    <string name="app_name2" translatable="false">Lesson2a</string>
+    <string name="saveButton">Save</string>
+    <string name="description">description</string>
+    <string name="ErrorFill" translatable="false">Fill all fields</string>
 </resources>

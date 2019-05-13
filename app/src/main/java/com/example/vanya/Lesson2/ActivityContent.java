@@ -1,19 +1,14 @@
-package com.example.vanya.lab_2;
+package com.example.vanya.Lesson2;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ListView;
 import android.widget.Toast;
 
-import java.sql.Array;
 import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
 
 public class ActivityContent extends AppCompatActivity implements View.OnClickListener {
     private Button saveButton;
@@ -29,7 +24,7 @@ public class ActivityContent extends AppCompatActivity implements View.OnClickLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_content);
 
-        saveButton = (Button) findViewById(R.id.saveButton);
+        saveButton = findViewById(R.id.saveButton);
 
 
         saveButton.setOnClickListener(this);
@@ -43,14 +38,14 @@ public class ActivityContent extends AppCompatActivity implements View.OnClickLi
             case R.id.saveButton:
 
 
-                addr = (EditText) findViewById(R.id.editText3);
-                des = (EditText) findViewById(R.id.editText6);
-                t = (EditText) findViewById(R.id.editText5);
-                if (addr.getText().length() == 0 || des.getText().length() == 0 ||
+                addr = findViewById(R.id.editText3);
+                des = findViewById(R.id.editText6);
+                t = findViewById(R.id.editText5);
+                if (addr.getText().equals("") || des.getText().length() == 0 ||
                         t.getText().length() == 0)
                 {
                     Toast toast = Toast.makeText(getApplicationContext(),
-                            "Fell all fields", Toast.LENGTH_SHORT);
+                            R.string.ErrorFill, Toast.LENGTH_SHORT);
                     toast.show();
 
                     break;
